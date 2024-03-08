@@ -1,0 +1,4 @@
+{
+	"searchfield":"//input[@class='desktop-searchBar']",
+	"menradiobutton":"(//label[@class='common-customRadio gender-label'])[1]"
+}
