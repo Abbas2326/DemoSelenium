@@ -17,14 +17,13 @@ public class MyntraDemo {
 
 	static DriverUtils util;
 	static WebDriver driver;
- 
+
 	@Test
 	public static void TestStart ()throws IOException, ParseException {
- 
 		JsonCredential();
 		CloseApplication();
 	}
- 
+
 	@BeforeTest
 	private static WebDriver OpenApplication() {
 		System.setProperty("WebDriver.chrome.driver", "C:/Users/MOHAABBA/Downloads/chromedriver.exe");
@@ -35,18 +34,16 @@ public class MyntraDemo {
 		util = new DriverUtils(driver);
 		return driver;
 	}
- 
+
 	public static void JsonCredential() throws IOException, ParseException {
- 
+
 		FileReader reader = new FileReader("./JSON/data.json");
- 
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String, String> userData = mapper.readValue(reader, Map.class);
- 
 		for (Map.Entry<String, String> a : userData.entrySet()) {
 			if (a.getValue() != null) {
 				System.out.println(a.getKey() + ":" + "all good to go");
- 
+
 			} else {
 				System.out.println(a.getKey() + ":" + "data missing");
 			}
@@ -54,36 +51,36 @@ public class MyntraDemo {
 		performClickOperations(userData);
 		PerformDateSelection(userData);
 		performSendKeysOperations(userData);
- 
+
 	}
- 
+
 	public static void performClickOperations(Map<String, String> userData) {
 		util.Click(userData.get("skipsigninButton"));
 		util.Click(userData.get("genderxpath"));
 		util.Click(userData.get("hobby1"));
 		util.Click(userData.get("hobby2"));
- 
+
 	}
- 
+
 	public static void PerformDateSelection(Map<String, String> userData) {
 		//util.JsExecutors("window.scrollBy(0,document.body.scrollHeight)", "");
 		util.Select(userData.get("yearxpath"), userData.get("yearvalue"));
 		util.Select(userData.get("monthxpath"), userData.get("monthvalue"));
 		util.Select(userData.get("dayxpath"), userData.get("dayvalue"));
- 
+
 	}
- 
+
 	public static void performSendKeysOperations(Map<String, String> userData) {
 		util.Sendkeys(userData.get("searchfield"), userData.get("Nike Shoes"));
 		util.Click(userData.get("usersubmit"));
- 
+
 	}
-	
+
 	@AfterTest
 	public static void CloseApplication() {
 		driver.quit();
 	}
- 
+
 }
 
 

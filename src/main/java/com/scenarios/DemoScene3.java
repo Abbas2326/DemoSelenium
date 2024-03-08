@@ -56,7 +56,7 @@ public class DemoScene3 {
 		book.close();
 	}
 
-	
+
 	public static void SignIn() {
 		utils.Click(excel.get("skipbtn"));
 		utils.Click(excel.get("switchdp"));
@@ -72,13 +72,12 @@ public class DemoScene3 {
 				driver.switchTo().window(window);
 			}
 		}
-
 	}
-	
+
 	public static void scrollWindow() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollBy(0,1000);");
-		
+
 	}
 
 	public static void screenShot() throws IOException {
@@ -96,9 +95,9 @@ public class DemoScene3 {
 		scrollWindow();
 		screenShot();
 	}
+	
 	@AfterMethod
 	public static void EndApp() {
 		driver.quit();
-
 	}
 }
