@@ -38,23 +38,12 @@ public class DemoScene5 {
 	}
 
 	public static void JsonCredential() throws IOException, ParseException {
-
 		FileReader reader = new FileReader("./JSON/data.json");
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String, String> userData = mapper.readValue(reader, Map.class);
-		//		for (Map.Entry<String, String> a : userData.entrySet()) {
-		//			if (a.getValue() != null) {
-		//				System.out.println(a.getKey() + ":" + "all good to go");
-		//
-		//			} else {
-		//				System.out.println(a.getKey() + ":" + "data missing");
-		//			}
-		//		}
 		performSearch(userData);
 		performSorting(userData);
 		firstproductPrice(userData);
-		//		}
-
 	}
 
 	public static void performSearch(Map<String, String> userData) {
