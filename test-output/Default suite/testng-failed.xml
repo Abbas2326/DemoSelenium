@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.scenarios.DemoScene3">
+      <class name="com.scenarios.DemoScene5">
         <methods>
-          <include name="EndApp"/>
-          <include name="StartApp"/>
+          <include name="TestStart"/>
+          <include name="OpenApplication"/>
+          <include name="CloseApplication"/>
         </methods>
-      </class> <!-- com.scenarios.DemoScene3 -->
+      </class> <!-- com.scenarios.DemoScene5 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
