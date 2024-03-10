@@ -23,7 +23,7 @@ public class DemoScene5 {
 	@Test
 	public static void TestStart ()throws IOException, ParseException {
 		JsonCredential();
-		
+
 	}
 
 	@BeforeTest
@@ -57,10 +57,16 @@ public class DemoScene5 {
 		util.Click(userData.get("low-high"));
 
 	}
+	
 	public static void firstproductPrice(Map<String, String> userData) {
-			System.out.println(util.GetText(userData.get("product-price")));
-			//System.out.println(price);
-			
+		String price = util.GetText(userData.get("product-price"));
+		int amount=Integer.parseInt(price.replaceAll("[^0-9]", ""));
+		System.out.println(amount);
+		if(amount<10000) {
+			System.out.println("Price is less than Rs.10,000");
+		}else {
+			System.out.println("Price is too high!");
+		}
 	}
 
 	@AfterTest

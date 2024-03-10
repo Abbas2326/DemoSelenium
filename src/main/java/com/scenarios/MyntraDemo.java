@@ -42,10 +42,14 @@ public class MyntraDemo {
 		//comparing value
 		wait.until(ExpectedConditions.urlContains("sort=price_asc"));
 		WebElement price=driver.findElement(By.xpath("(//div[@class='product-price'])[1]"));
-		String amount=price.getText();
-//		String amt=amount.replaceAll("[^0-9]","");
-//		int rate = Integer.parseInt(amt);
-		System.out.println(amount);
+		String amount=price.getText().replaceAll("[^0-9]", "");
+		int amt = Integer.parseInt(amount);
+		System.out.println(amt);
+		if(amt<10000) {
+			System.out.println("Price is less than Rs.10,000");
+		}else {
+			System.out.println("Price is too high!");
+		}
 		driver.close();
 
 	} 
