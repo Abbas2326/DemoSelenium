@@ -20,16 +20,14 @@ import org.openqa.selenium.io.FileHandler;
 import com.utils.*;
 
 public class demoScenarios {
+	static String clickbtn="//button[text()='    click   ']";
 	static WebDriver driver;
-	static DriverUtils utils;
+	static String selspo="//div[@class='row justify-content-center p-5']";
 	static String skipbtn="//button[@id='btn2']";
+	static String spologo="//div[@class='row justify-content-around pt-4 pb-5 px-5']";
 	static String switchdp="//a[text()='SwitchTo']";
 	static String swiframes="//a[text()='Windows']";
-	static String clickbtn="//button[text()='    click   ']";
-	
-	
-	static String selspo="//div[@class='row justify-content-center p-5']";
-	static String spologo="//div[@class='row justify-content-around pt-4 pb-5 px-5']";
+	static DriverUtils utils;
 
 	public static WebDriver openApplication() {
 		System.setProperty("webdriver.chrome.driver", "C:/Users/MOHAABBA/Downloads/chromedriver.exe");
@@ -39,11 +37,13 @@ public class demoScenarios {
 		utils=new DriverUtils(driver);
 		return driver;
 	}
+
 	public static void signIn() {
 		utils.Click(skipbtn);
 		utils.Click(switchdp);
 		utils.Click(swiframes);
 	} 
+
 	public static void changeWindow() {
 		String mainwin=driver.getWindowHandle();
 		utils.Click(clickbtn);
@@ -52,7 +52,6 @@ public class demoScenarios {
 			if(!window.equals(newwin)) {
 				driver.switchTo().window(window);			}
 		}
-		
 	}
 
 	//ALSO TRY WITH TRY&CATCH
@@ -62,12 +61,10 @@ public class demoScenarios {
 		File file1=ssel.getScreenshotAs(OutputType.FILE);
 		File fileloc1=new File("./screenshots/sel.png");
 		FileHandler.copy(file1, fileloc1);
-
 		WebElement ssell = driver.findElement(By.xpath(xpath2)); 
 		File file2=ssell.getScreenshotAs(OutputType.FILE);
 		File fileloc2=new File("./screenshots/sponser.png");
 		FileHandler.copy(file2, fileloc2);
-
 	}
 
 	public static void main(String[] args) throws IOException {
@@ -78,5 +75,4 @@ public class demoScenarios {
 		driver.close();
 		//driver.quit();
 	}
-	
 }

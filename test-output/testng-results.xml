@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-11T00:36:13 IST" name="Default suite" finished-at="2024-03-11T00:36:25 IST" duration-ms="11937">
+  <suite started-at="2024-03-11T11:55:19 IST" name="Default suite" finished-at="2024-03-11T11:55:32 IST" duration-ms="13234">
     <groups>
     </groups>
-    <test started-at="2024-03-11T00:36:13 IST" name="Default test" finished-at="2024-03-11T00:36:25 IST" duration-ms="11937">
-      <class name="com.scenarios.DemoScene5">
-        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:com.scenarios.DemoScene5@6892b3b6]" started-at="2024-03-11T00:36:13 IST" name="OpenApplication" finished-at="2024-03-11T00:36:21 IST" duration-ms="8104" status="PASS">
+    <test started-at="2024-03-11T11:55:19 IST" name="Default test" finished-at="2024-03-11T11:55:32 IST" duration-ms="13234">
+      <class name="com.scenarios.DemoScene2">
+        <test-method signature="StartApp()[pri:0, instance:com.scenarios.DemoScene2@130c12b7]" started-at="2024-03-11T11:55:19 IST" name="StartApp" finished-at="2024-03-11T11:55:32 IST" duration-ms="12537" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OpenApplication -->
-        <test-method signature="TestStart()[pri:0, instance:com.scenarios.DemoScene5@6892b3b6]" started-at="2024-03-11T00:36:21 IST" name="TestStart" finished-at="2024-03-11T00:36:24 IST" duration-ms="3317" status="PASS">
+        </test-method> <!-- StartApp -->
+        <test-method is-config="true" signature="EndApp()[pri:0, instance:com.scenarios.DemoScene2@130c12b7]" started-at="2024-03-11T11:55:32 IST" name="EndApp" finished-at="2024-03-11T11:55:32 IST" duration-ms="616" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestStart -->
-        <test-method is-config="true" signature="CloseApplication()[pri:0, instance:com.scenarios.DemoScene5@6892b3b6]" started-at="2024-03-11T00:36:24 IST" name="CloseApplication" finished-at="2024-03-11T00:36:25 IST" duration-ms="460" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApplication -->
-      </class> <!-- com.scenarios.DemoScene5 -->
+        </test-method> <!-- EndApp -->
+      </class> <!-- com.scenarios.DemoScene2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

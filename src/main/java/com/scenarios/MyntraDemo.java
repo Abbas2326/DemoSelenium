@@ -16,7 +16,6 @@ import org.testng.Assert;
 
 public class MyntraDemo {
 
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "C:/Users/MOHAABBA/Downloads/chromedriver.exe");
@@ -45,6 +44,7 @@ public class MyntraDemo {
 		String amount=price.getText().replaceAll("[^0-9]", "");
 		int amt = Integer.parseInt(amount);
 		System.out.println(amt);
+
 		if(amt<10000) {
 			System.out.println("Price is less than Rs.10,000");
 		}else {
