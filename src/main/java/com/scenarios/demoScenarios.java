@@ -48,10 +48,12 @@ public class demoScenarios {
 		String mainwin=driver.getWindowHandle();
 		utils.Click(clickbtn);
 		Set<String> newwin = driver.getWindowHandles();
+	
 		for( String window:newwin) {
 			if(!window.equals(newwin)) {
 				driver.switchTo().window(window);			}
 		}
+
 	}
 
 	//ALSO TRY WITH TRY&CATCH

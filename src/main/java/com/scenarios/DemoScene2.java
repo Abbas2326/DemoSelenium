@@ -34,7 +34,7 @@ public class DemoScene2 {
 		FileInputStream file = new FileInputStream("C:/Users/MOHAABBA/Downloads/demoscenarios.xlsx");
 		XSSFWorkbook book = new XSSFWorkbook(file);
 		XSSFSheet sh = book.getSheet("scene2");
-		
+
 		for(Row row : sh) {
 			String element = row.getCell(0).getStringCellValue();
 			//Cell cellVal = row.getCell(1);
@@ -42,6 +42,7 @@ public class DemoScene2 {
 			excel.put(element, cellVal);
 		}
 		book.close();
+
 	}
 
 	public static void signIn() {

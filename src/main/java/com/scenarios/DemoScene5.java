@@ -58,11 +58,13 @@ public class DemoScene5 {
 		String price = util.GetText(userData.get("product-price"));
 		int amount=Integer.parseInt(price.replaceAll("[^0-9]", ""));
 		System.out.println(amount);
+
 		if(amount<10000) {
 			System.out.println("Price is less than Rs.10,000");
 		}else {
 			System.out.println("Price is too high!");
 		}
+
 	}
 
 	@AfterTest
