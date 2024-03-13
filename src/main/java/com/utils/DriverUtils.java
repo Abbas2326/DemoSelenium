@@ -17,6 +17,14 @@ public class DriverUtils {
 		this.driver=driver;
 	}
 
+	public void openApp(String url) {
+		System.setProperty("webdriver.chrome.driver", "C:/Users/MOHAABBA/Downloads/chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.get(url);
+		driver.manage().window().maximize();
+	}	
+
 	public void Click(String xpath) {
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20)) ;
 		By by=By.xpath(xpath); 
@@ -45,14 +53,18 @@ public class DriverUtils {
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		return driver.findElement(by).getText();
 	}
-	
-//	public void switchWindow(String windowId) {
-//		Set<String> newwin = driver.getWindowHandles();
-//		for( String window:newwin) {
-//			if(window.equals(windowId)) {
-//				driver.switchTo().window(window);
-//			}
-//		}
-//	}
+	//	public void switchWindow(String windowId) {
+	//		Set<String> newwin = driver.getWindowHandles();
+	//		for( String window:newwin) {
+	//			if(window.equals(windowId)) {
+	//				driver.switchTo().window(window);
+	//			}
+	//		}
+	//	}
+
+	public void closeApp() {
+		driver.quit();
+	}
+
 }
 

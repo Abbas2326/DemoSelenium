@@ -20,7 +20,7 @@ public class DemoScene5 {
 	static DriverUtils util;
 
 	@Test
-	public static void TestStart ()throws IOException, ParseException {
+	public static void testStart ()throws IOException, ParseException {
 		jsonCredential();
 	}
 
@@ -40,7 +40,7 @@ public class DemoScene5 {
 		Map<String, String> userData = mapper.readValue(reader, Map.class);
 		performSearch(userData);
 		performSorting(userData);
-		firstproductPrice(userData);
+		firstProductPrice(userData);
 	}
 
 	public static void performSearch(Map<String, String> userData) {
@@ -54,7 +54,7 @@ public class DemoScene5 {
 		util.Click(userData.get("low-high"));
 	}
 
-	public static void firstproductPrice(Map<String, String> userData) {
+	public static void firstProductPrice(Map<String, String> userData) {
 		String price = util.GetText(userData.get("product-price"));
 		int amount=Integer.parseInt(price.replaceAll("[^0-9]", ""));
 		System.out.println(amount);
@@ -71,6 +71,7 @@ public class DemoScene5 {
 	public static void CloseApplication() {
 		driver.quit();
 	}
+
 }
 
 

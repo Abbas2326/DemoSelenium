@@ -68,11 +68,13 @@ public class DemoScene3 {
 		String mainwin=driver.getWindowHandle();
 		utils.Click(excel.get("clickbtn"));
 		Set<String> newwin = driver.getWindowHandles();
+
 		for( String window:newwin) {
 			if(!window.equals(mainwin)) {
 				driver.switchTo().window(window);
 			}
 		}
+
 	}
 
 	public static void scrollWindow() {
