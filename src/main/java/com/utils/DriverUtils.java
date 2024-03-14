@@ -17,7 +17,7 @@ public class DriverUtils {
 		this.driver=driver;
 	}
 
-	public void openApp(String url) {
+	public void OpenApp(String url) {
 		System.setProperty("webdriver.chrome.driver", "C:/Users/MOHAABBA/Downloads/chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -44,7 +44,7 @@ public class DriverUtils {
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20)); 
 		By by=By.xpath(xpath);
 		wait.until (ExpectedConditions.elementToBeClickable(by)); 
-		driver.findElement (by).sendKeys(inputValue);
+		driver.findElement(by).sendKeys(inputValue);
 	}
 
 	public String GetText(String xpath) {
@@ -62,7 +62,7 @@ public class DriverUtils {
 	//		}
 	//	}
 
-	public void closeApp() {
+	public void CloseApp() {
 		driver.quit();
 	}
 
