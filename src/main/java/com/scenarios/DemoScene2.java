@@ -44,13 +44,13 @@ public class DemoScene2 {
 		for(Row row : sh) {
 			String element = row.getCell(0).getStringCellValue();
 			Cell cellVal = row.getCell(1);
-			//String cellVal = row.getCell(1).getStringCellValue()	;	
+			//String cellVal = row.getCell(1).getStringCellValue()	;
 			excel.put(element, getStringValue(cellVal));
 		}
 		book.close();
 
 	}
-	
+
 	private static String getStringValue(Cell cell) {
 		if (cell == null) {
 			return null;

@@ -1,20 +1,19 @@
 package com.utils;
 
 import java.time.Duration;
-import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DriverUtils {
 	private static WebDriver driver;
 
 	public DriverUtils(WebDriver driver) {
-		this.driver=driver;
+		DriverUtils.driver=driver;
 	}
 
 	public void OpenApp(String url) {
@@ -23,27 +22,27 @@ public class DriverUtils {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get(url);
 		driver.manage().window().maximize();
-	}	
+	}
 
 	public void Click(String xpath) {
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20)) ;
-		By by=By.xpath(xpath); 
-		wait.until(ExpectedConditions.elementToBeClickable(by)); 
+		By by=By.xpath(xpath);
+		wait.until(ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).click();
 	}
 
 	public void Select(String xpath, String option) {
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20));
-		By by=By.xpath(xpath); 
+		By by=By.xpath(xpath);
 		//wait.until(ExpectedConditions.elementToBeSelected (by));
 		//driver.findElement (by).click();
 		new Select (driver.findElement (by)).selectByValue(option);
 	}
 
 	public void Sendkeys (String xpath, String inputValue) {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20)); 
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20));
 		By by=By.xpath(xpath);
-		wait.until (ExpectedConditions.elementToBeClickable(by)); 
+		wait.until (ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).sendKeys(inputValue);
 	}
 

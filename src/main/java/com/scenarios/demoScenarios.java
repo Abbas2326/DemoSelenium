@@ -6,18 +6,15 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Set;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.utils.*;
+import com.utils.DriverUtils;
 
 public class demoScenarios {
 	static String clickbtn="//button[text()='    click   ']";
@@ -42,13 +39,13 @@ public class demoScenarios {
 		utils.Click(skipbtn);
 		utils.Click(switchdp);
 		utils.Click(swiframes);
-	} 
+	}
 
 	public static void changeWindow() {
 		String mainwin=driver.getWindowHandle();
 		utils.Click(clickbtn);
 		Set<String> newwin = driver.getWindowHandles();
-	
+
 		for( String window:newwin) {
 			if(!window.equals(newwin)) {
 				driver.switchTo().window(window);			}
@@ -58,12 +55,12 @@ public class demoScenarios {
 
 	//ALSO TRY WITH TRY&CATCH
 	public static void screenShot(String xpath, String xpath2) throws IOException {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20)); 
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20));
 		WebElement ssel = driver.findElement(By.xpath(xpath));
 		File file1=ssel.getScreenshotAs(OutputType.FILE);
 		File fileloc1=new File("./screenshots/sel.png");
 		FileHandler.copy(file1, fileloc1);
-		WebElement ssell = driver.findElement(By.xpath(xpath2)); 
+		WebElement ssell = driver.findElement(By.xpath(xpath2));
 		File file2=ssell.getScreenshotAs(OutputType.FILE);
 		File fileloc2=new File("./screenshots/sponser.png");
 		FileHandler.copy(file2, fileloc2);

@@ -8,20 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -29,7 +24,7 @@ import com.utils.DriverUtils;
 
 public class DemoScene3 {
 	static WebDriver driver;
-	static Map<String, String> excel = new HashMap(); 
+	static Map<String, String> excel = new HashMap();
 	static String selspo="//div[@class='row justify-content-center p-5']";
 	static String spologo="//div[@class='row justify-content-around pt-4 pb-5 px-5']";
 	static DriverUtils utils;
@@ -51,7 +46,7 @@ public class DemoScene3 {
 		for(Row row : sh) {
 			String element = row.getCell(0).getStringCellValue();
 			//Cell cellVal = row.getCell(1);
-			String cellVal = row.getCell(1).getStringCellValue()	;	
+			String cellVal = row.getCell(1).getStringCellValue()	;
 			excel.put(element, cellVal);
 		}
 		book.close();
