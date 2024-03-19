@@ -49,8 +49,8 @@ public class DemoScene3 {
 			String cellVal = row.getCell(1).getStringCellValue()	;
 			excel.put(element, cellVal);
 		}
-		book.close();
 
+		book.close();
 	}
 
 	public static void signIn() {

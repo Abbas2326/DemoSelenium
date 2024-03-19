@@ -47,11 +47,12 @@ public class DemoScene2 {
 			//String cellVal = row.getCell(1).getStringCellValue()	;
 			excel.put(element, getStringValue(cellVal));
 		}
-		book.close();
 
+		book.close();
 	}
 
 	private static String getStringValue(Cell cell) {
+
 		if (cell == null) {
 			return null;
 		} else if (cell.getCellType() == CellType.STRING) {
@@ -61,6 +62,7 @@ public class DemoScene2 {
 		} else {
 			return null;
 		}
+
 	}
 
 	public static void signIn() {

@@ -47,8 +47,9 @@ public class MyntraDemo {
 		}else {
 			System.out.println("Price is too high!");
 		}
-		driver.close();
 
+		driver.close();
 	}
+
 }
 
