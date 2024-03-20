@@ -30,12 +30,8 @@ public class DemoScene3 {
 	static DriverUtils utils;
 
 	public static void openApp() {
-		System.setProperty("webdriver.chrome.driver", "C:/Users/MOHAABBA/Downloads/chromedriver.exe");
-		driver=new ChromeDriver();
-		utils=new DriverUtils(driver);
-		driver.get("https://demo.automationtesting.in/Index.html");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
+		utils.OpenApp("https://demo.automationtesting.in/Index.html");
+		utils = new DriverUtils(driver);
 	}
 
 	public static void readValue() throws IOException {

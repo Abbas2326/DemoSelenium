@@ -26,11 +26,7 @@ public class DemoScene5 {
 
 	@BeforeTest
 	private static void openApplication() {
-		System.setProperty("WebDriver.chrome.driver", "C:/Users/MOHAABBA/Downloads/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get("https://www.myntra.com/");
-		driver.manage().window().maximize();
+		util.OpenApp("https://www.myntra.com/");
 		util = new DriverUtils(driver);
 	}
 
@@ -40,7 +36,7 @@ public class DemoScene5 {
 		Map<String, String> userData = mapper.readValue(reader, Map.class);
 		performSearch(userData);
 		performSorting(userData);
-		//firstProductPrice(userData);
+		firstProductPrice(userData);
 	}
 
 	public static void performSearch(Map<String, String> userData) {

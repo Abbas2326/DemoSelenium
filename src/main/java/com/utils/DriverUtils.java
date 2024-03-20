@@ -36,7 +36,7 @@ public class DriverUtils {
 		By by=By.xpath(xpath);
 		//wait.until(ExpectedConditions.elementToBeSelected (by));
 		//driver.findElement (by).click();
-		new Select (driver.findElement (by)).selectByValue(option);
+		new Select(driver.findElement(by)).selectByValue(option);
 	}
 
 	public void Sendkeys (String xpath, String inputValue) {
