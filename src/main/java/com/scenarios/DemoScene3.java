@@ -73,7 +73,7 @@ public class DemoScene3 {
 
 	public static void scrollWindow() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollBy(0, 1000)");
+		jse.executeScript("window.scrollBy(0, 800)");
 	}
 
 	public static void screenShot() throws IOException {
