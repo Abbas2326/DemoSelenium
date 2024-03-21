@@ -1,0 +1,22 @@
+{
+	"skip-button":"//button[@id='btn2']",
+	"first-name":"//input[@placeholder='First Name']",
+	"name1":"Mohammed",
+	"last-name":"//input[@placeholder='Last Name']",
+	"name2":"Abbas",
+	"e-mail":"//input[@type='email']",
+	"mailid":"abbas@gmail.com",
+	"phone":"//input[@type='tel']",
+	"number":"1234567890",
+	"gender":"//input[@value='Male']",
+	"hobbie1":"//input[@value='Cricket']",
+	"hobbie2":"//input[@value='Movies']",
+	"country":"//select[@id='countries']",
+	"selcon":"Select Country",
+	"dobyear":"//select[@id='yearbox']",
+	"year":"2000",
+	"dobmonth":"//select[@placeholder='Month']",
+	"month":"April",
+	"dobday":"//select[@id='daybox']",
+	"day":"26"
+}
