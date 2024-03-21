@@ -2,20 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-21T15:12:14 IST" name="Default suite" finished-at="2024-03-21T15:12:44 IST" duration-ms="30123">
+  <suite started-at="2024-03-21T16:15:39 IST" name="Default suite" finished-at="2024-03-21T16:15:54 IST" duration-ms="15091">
     <groups>
     </groups>
-    <test started-at="2024-03-21T15:12:14 IST" name="Default test" finished-at="2024-03-21T15:12:44 IST" duration-ms="30123">
-      <class name="com.scenarios.DemoScene1">
-        <test-method signature="jsonCredential()[pri:0, instance:com.scenarios.DemoScene1@2e3967ea]" started-at="2024-03-21T15:12:14 IST" name="jsonCredential" finished-at="2024-03-21T15:12:43 IST" duration-ms="29601" status="PASS">
+    <test started-at="2024-03-21T16:15:39 IST" name="Default test" finished-at="2024-03-21T16:15:54 IST" duration-ms="15091">
+      <class name="com.scenarios.DemoScene3">
+        <test-method signature="startApp()[pri:0, instance:com.scenarios.DemoScene3@771a660]" started-at="2024-03-21T16:15:39 IST" name="startApp" finished-at="2024-03-21T16:15:54 IST" duration-ms="15015" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jsonCredential -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.scenarios.DemoScene1@2e3967ea]" started-at="2024-03-21T15:12:43 IST" name="closeApp" finished-at="2024-03-21T15:12:44 IST" duration-ms="474" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- com.scenarios.DemoScene1 -->
+        </test-method> <!-- startApp -->
+      </class> <!-- com.scenarios.DemoScene3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

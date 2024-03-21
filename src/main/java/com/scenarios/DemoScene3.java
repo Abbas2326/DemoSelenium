@@ -58,7 +58,7 @@ public class DemoScene3 {
 		utils.Click(excel.get("separatewin"));
 	}
 
-	public static void changeWindow() {
+	public static void changeWindow() { 
 		String mainwin=driver.getWindowHandle();
 		utils.Click(excel.get("clickbtn"));
 		Set<String> newwin = driver.getWindowHandles();
@@ -69,9 +69,6 @@ public class DemoScene3 {
 				driver.manage().window().maximize();
 			}
 		}
-	}
-
-	public static void scrollWindow() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollBy(0, 800)");
 	}
@@ -88,8 +85,8 @@ public class DemoScene3 {
 		readValue();
 		signIn();
 		changeWindow();
-		scrollWindow();
 		//screenShot();
+		driver.close();
 	}
 
 	@AfterTest
