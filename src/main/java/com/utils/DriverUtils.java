@@ -1,6 +1,7 @@
 package com.utils;
 
 import java.time.Duration;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -49,6 +50,15 @@ public class DriverUtils {
 		By by=By.xpath(xpath);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		return driver.findElement(by).getText();
+	}
+
+	public void SwitchWindow(String windowId, Set<String> windowIds) {
+		for( String window:windowIds) {
+			if(!window.equals(windowId)) {
+				driver.switchTo().window(window);
+				driver.manage().window().maximize();
+			}
+		}
 	}
 
 	public void CloseApp() {
