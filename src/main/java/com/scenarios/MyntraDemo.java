@@ -37,7 +37,7 @@ public class MyntraDemo {
 
 		//comparing value
 		wait.until(ExpectedConditions.urlContains("sort=price_asc"));
-		WebElement price=driver.findElement(By.xpath("(//div[@class='product-price'])[1]"));
+		WebElement price=driver.findElement(By.xpath("(//span[@class='product-discountedPrice'])[1]"));
 		String amount=price.getText().replaceAll("[^0-9]", "");
 		int amt = Integer.parseInt(amount);
 		System.out.println(amt);
