@@ -50,14 +50,6 @@ public class DriverUtils {
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		return driver.findElement(by).getText();
 	}
-	//	public void switchWindow(String windowId) {
-	//		Set<String> newwin = driver.getWindowHandles();
-	//		for( String window:newwin) {
-	//			if(window.equals(windowId)) {
-	//				driver.switchTo().window(window);
-	//			}
-	//		}
-	//	}
 
 	public void CloseApp() {
 		driver.quit();
