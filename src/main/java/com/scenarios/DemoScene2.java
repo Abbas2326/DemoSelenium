@@ -8,6 +8,7 @@ import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.CellValue;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -24,12 +25,12 @@ import com.utils.DriverUtils;
 public class DemoScene2 {
 	static WebDriver driver;
 	static Map<String, String> excel = new HashMap();
-	static String url="https://demo.automationtesting.in/Index.html";
 	static DriverUtils utils;
 
 	public static void runApp() {
+		driver=new ChromeDriver();
+		utils=new DriverUtils(driver);
 		utils.OpenApp("https://demo.automationtesting.in/Index.html");
-		utils = new DriverUtils(driver);
 	}
 
 	public static void readValue() throws IOException {
@@ -85,8 +86,8 @@ public class DemoScene2 {
 		utils.Click(excel.get("picker1"));
 		utils.Click(excel.get("today"));
 		utils.Click(excel.get("picker2"));
-		utils.Sendkeys(excel.get("month"),excel.get("mvalue"));
-		utils.Sendkeys(excel.get("year"),excel.get("yvalue"));
+		utils.Select(excel.get("month"), excel.get("mvalue"));
+		utils.Select(excel.get("year"), excel.get("yvalue"));
 		utils.Click(excel.get("date2"));
 	}
 
@@ -101,7 +102,7 @@ public class DemoScene2 {
 
 	@AfterMethod
 	public static void exitApp() {
-		utils.CloseApp();
+		driver.quit();
 	}
 
 }

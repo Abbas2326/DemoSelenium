@@ -18,6 +18,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import com.utils.DriverUtils;
@@ -30,16 +31,17 @@ public class DemoScene3 {
 	static DriverUtils utils;
 
 	public static void openApp() {
-		utils.OpenApp("https://demo.automationtesting.in/Index.html");
+		driver=new ChromeDriver();
 		utils = new DriverUtils(driver);
+		utils.OpenApp("https://demo.automationtesting.in/Index.html");
 	}
 
 	public static void readValue() throws IOException {
-		FileInputStream file = new FileInputStream("C:/Users/MOHAABBA/Downloads/demoscenarios.xlsx");
+		FileInputStream file = new FileInputStream("C:\\Users/MOHAABBA\\Downloads\\demoscenarios.xlsx");
 		XSSFWorkbook book = new XSSFWorkbook(file);
-		XSSFSheet sh = book.getSheetAt(0);
+		XSSFSheet sheet = book.getSheet("scene3");
 
-		for(Row row : sh) {
+		for(Row row : sheet) {
 			String element = row.getCell(0).getStringCellValue();
 			//Cell cellVal = row.getCell(1);
 			String cellVal = row.getCell(1).getStringCellValue()	;
@@ -52,7 +54,8 @@ public class DemoScene3 {
 	public static void signIn() {
 		utils.Click(excel.get("skipbtn"));
 		utils.Click(excel.get("switchdp"));
-		utils.Click(excel.get("swiframes"));
+		utils.Click(excel.get("swiwindow"));
+		utils.Click(excel.get("separatewin"));
 	}
 
 	public static void changeWindow() {
@@ -63,14 +66,14 @@ public class DemoScene3 {
 		for( String window:newwin) {
 			if(!window.equals(mainwin)) {
 				driver.switchTo().window(window);
+				driver.manage().window().maximize();
 			}
 		}
-
 	}
 
 	public static void scrollWindow() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollBy(0,1000);");
+		jse.executeScript("window.scrollBy(0, 1000)");
 	}
 
 	public static void screenShot() throws IOException {
@@ -89,8 +92,9 @@ public class DemoScene3 {
 		//screenShot();
 	}
 
-	@AfterMethod
+	@AfterTest
 	public static void endApp() {
 		driver.quit();
 	}
+
 }

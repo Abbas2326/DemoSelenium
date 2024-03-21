@@ -18,7 +18,6 @@ public class DriverUtils {
 
 	public void OpenApp(String url) {
 		System.setProperty("webdriver.chrome.driver", "C:/Users/MOHAABBA/Downloads/chromedriver.exe");
-		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get(url);
 		driver.manage().window().maximize();
@@ -32,10 +31,9 @@ public class DriverUtils {
 	}
 
 	public void Select(String xpath, String option) {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20));
+		//WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds (20));
 		By by=By.xpath(xpath);
 		//wait.until(ExpectedConditions.elementToBeSelected (by));
-		//driver.findElement (by).click();
 		new Select(driver.findElement(by)).selectByValue(option);
 	}
 
