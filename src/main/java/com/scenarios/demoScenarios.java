@@ -50,7 +50,6 @@ public class demoScenarios {
 			if(!window.equals(newwin)) {
 				driver.switchTo().window(window);			}
 		}
-
 	}
 
 	//ALSO TRY WITH TRY&CATCH

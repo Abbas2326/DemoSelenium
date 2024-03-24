@@ -26,8 +26,6 @@ import com.utils.DriverUtils;
 public class DemoScene3 {
 	static WebDriver driver;
 	static Map<String, String> excel = new HashMap();
-	static String selspo="//div[@class='row justify-content-center p-5']";
-	static String spologo="//div[@class='row justify-content-around pt-4 pb-5 px-5']";
 	static DriverUtils utils;
 
 	public static void openApp() {
@@ -69,6 +67,7 @@ public class DemoScene3 {
 				driver.manage().window().maximize();
 			}
 		}
+
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollBy(0, 800)");
 	}
