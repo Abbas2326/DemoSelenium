@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-24T17:35:43 IST" name="Default suite" finished-at="2024-03-24T17:35:50 IST" duration-ms="6896">
+  <suite started-at="2024-03-28T11:15:08 IST" name="Default suite" finished-at="2024-03-28T11:15:30 IST" duration-ms="22010">
     <groups>
     </groups>
-    <test started-at="2024-03-24T17:35:43 IST" name="Default test" finished-at="2024-03-24T17:35:50 IST" duration-ms="6896">
-      <class name="com.scenarios.DemoScene4">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:com.scenarios.DemoScene4@7526515b]" started-at="2024-03-24T17:35:43 IST" name="openApp" finished-at="2024-03-24T17:35:49 IST" duration-ms="5244" status="PASS">
+    <test started-at="2024-03-28T11:15:08 IST" name="Default test" finished-at="2024-03-28T11:15:30 IST" duration-ms="22010">
+      <class name="com.scenarios.DemoScene5">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:com.scenarios.DemoScene5@2e8c1c9b]" started-at="2024-03-28T11:15:08 IST" name="openApplication" finished-at="2024-03-28T11:15:25 IST" duration-ms="16520" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="compareValues()[pri:0, instance:com.scenarios.DemoScene4@7526515b]" started-at="2024-03-24T17:35:49 IST" name="compareValues" finished-at="2024-03-24T17:35:50 IST" duration-ms="1272" status="PASS">
+        </test-method> <!-- openApplication -->
+        <test-method signature="jsonCredential()[pri:0, instance:com.scenarios.DemoScene5@2e8c1c9b]" started-at="2024-03-28T11:15:25 IST" name="jsonCredential" finished-at="2024-03-28T11:15:29 IST" duration-ms="4282" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- compareValues -->
-        <test-method is-config="true" signature="quitWindow()[pri:0, instance:com.scenarios.DemoScene4@7526515b]" started-at="2024-03-24T17:35:50 IST" name="quitWindow" finished-at="2024-03-24T17:35:50 IST" duration-ms="310" status="PASS">
+        </test-method> <!-- jsonCredential -->
+        <test-method is-config="true" signature="CloseApplication()[pri:0, instance:com.scenarios.DemoScene5@2e8c1c9b]" started-at="2024-03-28T11:15:29 IST" name="CloseApplication" finished-at="2024-03-28T11:15:30 IST" duration-ms="1121" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitWindow -->
-      </class> <!-- com.scenarios.DemoScene4 -->
+        </test-method> <!-- CloseApplication -->
+      </class> <!-- com.scenarios.DemoScene5 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

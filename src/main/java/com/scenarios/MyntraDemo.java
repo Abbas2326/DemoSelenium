@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class MyntraDemo {
 
@@ -41,12 +42,12 @@ public class MyntraDemo {
 		String amount=price.getText().replaceAll("[^0-9]", "");
 		int amt = Integer.parseInt(amount);
 		System.out.println(amt);
-
-		if(amt<10000) {
-			System.out.println("Price is less than Rs.10,000");
-		}else {
-			System.out.println("Price is too high!");
-		}
+		Assert.assertEquals(amt<10000, true);
+//		if(amt<10000) {
+//			System.out.println("Price is less than Rs.10,000");
+//		}else {
+//			System.out.println("Price is too high!");
+//		}
 
 		driver.close();
 	}
