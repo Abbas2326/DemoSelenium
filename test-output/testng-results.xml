@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-28T11:15:08 IST" name="Default suite" finished-at="2024-03-28T11:15:30 IST" duration-ms="22010">
+  <suite started-at="2024-04-04T14:31:48 IST" name="Default suite" finished-at="2024-04-04T14:32:37 IST" duration-ms="49467">
     <groups>
     </groups>
-    <test started-at="2024-03-28T11:15:08 IST" name="Default test" finished-at="2024-03-28T11:15:30 IST" duration-ms="22010">
-      <class name="com.scenarios.DemoScene5">
-        <test-method is-config="true" signature="openApplication()[pri:0, instance:com.scenarios.DemoScene5@2e8c1c9b]" started-at="2024-03-28T11:15:08 IST" name="openApplication" finished-at="2024-03-28T11:15:25 IST" duration-ms="16520" status="PASS">
+    <test started-at="2024-04-04T14:31:48 IST" name="Default test" finished-at="2024-04-04T14:32:37 IST" duration-ms="49467">
+      <class name="com.scenarios.RepliconBalanceOffs">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:com.scenarios.RepliconBalanceOffs@60099951]" started-at="2024-04-04T14:31:48 IST" name="openApp" finished-at="2024-04-04T14:32:04 IST" duration-ms="16398" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openApplication -->
-        <test-method signature="jsonCredential()[pri:0, instance:com.scenarios.DemoScene5@2e8c1c9b]" started-at="2024-03-28T11:15:25 IST" name="jsonCredential" finished-at="2024-03-28T11:15:29 IST" duration-ms="4282" status="PASS">
+        </test-method> <!-- openApp -->
+        <test-method signature="runMethods()[pri:0, instance:com.scenarios.RepliconBalanceOffs@60099951]" started-at="2024-04-04T14:32:04 IST" name="runMethods" finished-at="2024-04-04T14:32:37 IST" duration-ms="32304" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jsonCredential -->
-        <test-method is-config="true" signature="CloseApplication()[pri:0, instance:com.scenarios.DemoScene5@2e8c1c9b]" started-at="2024-03-28T11:15:29 IST" name="CloseApplication" finished-at="2024-03-28T11:15:30 IST" duration-ms="1121" status="PASS">
+        </test-method> <!-- runMethods -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.scenarios.RepliconBalanceOffs@60099951]" started-at="2024-04-04T14:32:37 IST" name="closeApp" finished-at="2024-04-04T14:32:37 IST" duration-ms="681" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CloseApplication -->
-      </class> <!-- com.scenarios.DemoScene5 -->
+        </test-method> <!-- closeApp -->
+      </class> <!-- com.scenarios.RepliconBalanceOffs -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
